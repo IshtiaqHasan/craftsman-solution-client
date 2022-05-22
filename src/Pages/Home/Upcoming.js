@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolInfo = ({ tool }) => {
+const Upcoming = ({ tool }) => {
     const { _id, name, price, description, img, AvailableQuantity, MinOrderQuantity } = tool;
     return (
         <div class="card bg-base-100 shadow-xl">
@@ -10,15 +10,15 @@ const ToolInfo = ({ tool }) => {
             <div class="card-body">
                 <h2 className='text-xl font-bold'>{name}</h2>
                 <p>{description}</p>
-                <p className='font-bold'>Available Quantity: {AvailableQuantity}</p>
-                <p className='font-bold'>Minimum Order Quantity: {MinOrderQuantity}</p>
-                <h2 className='text-xl font-bold'>Price: ${price}</h2>
+                <p className='font-bold'>First Production Quantity: {AvailableQuantity}</p>
+                <p className='font-bold'>Minimum Pre-Order Quantity: {MinOrderQuantity}</p>
+                <h2 className='text-xl font-bold'>Approx.Price: ${price}</h2>
                 <div class="card-actions">
-                    <button className="btn btn-accent">Order Now</button>
+                    <button className="btn btn-accent">Pre-Order</button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default ToolInfo;
+export default Upcoming;
