@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, useNavigate, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const ToolInfo = ({ tool }) => {
+const AllItem = ({ tool, setItems }) => {
     const { _id, name, price, description, img, AvailableQuantity, MinOrderQuantity } = tool;
 
     return (
@@ -16,13 +16,11 @@ const ToolInfo = ({ tool }) => {
                 <p className='font-bold'>Minimum Order Quantity: {MinOrderQuantity}</p>
                 <h2 className='text-xl font-bold'>Price: ${price}</h2>
                 <div class="card-actions">
-                    <Link
-                        to="allItems"
-                        className="btn btn-accent text-white uppercase">Order</Link>
+                    <label onClick={() => setItems(tool)} for="purchase-modal" className="btn btn-accent text-white uppercase">Click TO Continue Purchase</label>
                 </div>
             </div>
         </div >
     );
 };
 
-export default ToolInfo;
+export default AllItem;

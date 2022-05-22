@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import UseTools from '../../hooks/useTools'
+import useTools from '../../hooks/useTools'
+import Purchase from '../Purchase/Purchase';
 import ToolInfo from './ToolInfo';
 
 const Toolsinfo = () => {
-    const [tools, setTools] = UseTools([])
+    const [tools, setTools] = useTools([]);
+
     return (
         <div >
             <div class="card-body">
@@ -16,6 +18,7 @@ const Toolsinfo = () => {
                         ></ToolInfo>)
                     }
                 </div>
+
             </div>
         </div>
     );
