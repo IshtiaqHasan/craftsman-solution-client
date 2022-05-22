@@ -1,0 +1,83 @@
+[
+    {
+        "_id": 1,
+        "name": "Measuring Tape",
+        "price": "10",
+        "description": "Our measuring tape consists of a ribbon of cloth, plastic, fibre glass, or metal strip with linear measurement markings",
+        "img": "https://i.ibb.co/QHpXwhw/tape.jpg",
+        "AvailableQuantity": "300",
+        "MinOrderQuantity": "100"
+    },
+    {
+        "_id": 2,
+        "name": "Screwdriver",
+        "price": "25",
+        "description": "Our Special screwdriver has a handle and a shaft, ending in a tip the user puts into the screw head before turning the handle.",
+        "img": "https://i.ibb.co/MsskGCR/screwdriver.jpg",
+        "AvailableQuantity": "500",
+        "MinOrderQuantity": "100"
+    },
+    {
+        "_id": 3,
+        "name": "Wrench",
+        "price": "55",
+        "description": " Our higher quality wrenches are typically made from chromium-vanadium alloy tool steels and are often drop-forged.",
+        "img": "https://i.ibb.co/xD1kzWf/wrench.jpg",
+        "AvailableQuantity": "400",
+        "MinOrderQuantity": "80"
+    },
+    {
+        "_id": 4,
+        "name": "Hammer",
+        "price": "40",
+        "description": "Our special carpentry and blacksmithing hammers are generally wielded from a stationary stance against a stationary target.",
+        "img": "https://i.ibb.co/DDnwDdJ/hammer.jpg",
+        "AvailableQuantity": "700",
+        "MinOrderQuantity": "100"
+    },
+    {
+        "_id": 5,
+        "name": "Hand saw",
+        "price": "100",
+        "description": "Is your DIY project list growing long? Cut it down to size with the best handsaws available today. Our experts bought and tested.",
+        "img": "https://i.ibb.co/4NtMY39/handsaw.jpg",
+        "AvailableQuantity": "1000",
+        "MinOrderQuantity": "50"
+    },
+    {
+        "_id": 6,
+        "name": "Shovel",
+        "price": "200",
+        "description": "The design of the shovel determines the lifespan of the tool. If the trowel has a one-piece design, then it will last for a long time.",
+        "img": "https://i.ibb.co/hKC3HgG/shovel.jpg",
+        "AvailableQuantity": "200",
+        "MinOrderQuantity": "50"
+    },
+    {
+        "_id": 7,
+        "name": "Hacksaw",
+        "price": "150",
+        "description": "Our hacksaws are hand saws with a C-shaped walking frame that holds a blade under tension. Such hacksaws have a handle, usually a pistol grip..",
+        "img": "https://i.ibb.co/HzYj5Y7/hacksaw.png",
+        "AvailableQuantity": "500",
+        "MinOrderQuantity": "100"
+    },
+    {
+        "_id": 8,
+        "name": "Knife",
+        "price": "40",
+        "description": "Compact Fixed Blade Folding Knife fits comfortably in most pockets. It can also be stored and accessed easily with its belt clip.",
+        "img": "https://i.ibb.co/x7DVxtp/knive.jpg",
+        "AvailableQuantity": "700",
+        "MinOrderQuantity": "150"
+    },
+    {
+        "_id": 9,
+        "name": "Toolbox",
+        "price": "250",
+        "description": "Carry power tools, hand tools, gear, and other medium-to-large items in the STANLEY® 28 in. FATMAX® Structural Foam Toolbox.",
+        "img": "https://i.ibb.co/0rrg6WD/box.jpg",
+        "AvailableQuantity": "200",
+        "MinOrderQuantity": "50"
+    }
+]
