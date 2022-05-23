@@ -1,18 +1,18 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "name": "RFL Ltd.",
         "words": "Craftman Solution offers a wide range of tools that are well-built, high-performance.",
         "rating": "4.5 Stars"
     },
     {
-        "id": 2,
+        "_id": 2,
         "name": "ACI Ltd.",
         "words": "Craftman Solution's are considered such good tools that they ranked the highest in a Consumer Reports.",
         "rating": "4.8 Stars"
     },
     {
-        "id": 3,
+        "_id": 3,
         "name": "Aramco Ltd.",
         "words": "Due to their less advanced technology, Craftsman Solution are usually more affordable and easier to maintain.",
         "rating": "4.5 Stars"

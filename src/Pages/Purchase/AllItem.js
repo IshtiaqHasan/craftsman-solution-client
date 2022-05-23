@@ -16,7 +16,7 @@ const AllItem = ({ tool, setItems }) => {
                 <p className='font-bold'>Minimum Order Quantity: {MinOrderQuantity}</p>
                 <h2 className='text-xl font-bold'>Price: ${price}</h2>
                 <div className="card-actions">
-                    <label onClick={() => setItems(tool)} for="purchase-modal" className="btn btn-accent text-white uppercase">Click TO Continue Purchase</label>
+                    <label onClick={() => setItems(tool)} htmlFor="purchase-modal" className="btn btn-accent text-white uppercase">Click TO Continue Purchase</label>
                 </div>
             </div>
         </div >
