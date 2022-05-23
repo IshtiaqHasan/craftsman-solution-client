@@ -30,6 +30,7 @@ const Purchase = ({ items, setItems }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                toast(`Hello ${user.displayName} We Have Received Your Order`)
             })
     }
     return (
