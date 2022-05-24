@@ -8,7 +8,12 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?BuyerEmail=${user.email}`)
+            fetch(`http://localhost:5000/order?BuyerEmail=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }

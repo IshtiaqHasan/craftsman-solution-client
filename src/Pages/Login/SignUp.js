@@ -33,7 +33,7 @@ const SignUp = () => {
     }
 
     if (user || gUser) {
-        navigate('/');
+        navigate('/allItems');
     }
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
