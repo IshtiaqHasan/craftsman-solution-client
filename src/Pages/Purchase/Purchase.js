@@ -13,7 +13,7 @@ const Purchase = ({ items, setItems }) => {
         const order = {
             itemId: _id,
             ItemName: name,
-            Order_Quantity: event.target.order.value,
+            OrderQuantity: event.target.order.value,
             BuyerName: user.displayName,
             BuyerEmail: user.email,
             Contact: event.target.phone.value,
