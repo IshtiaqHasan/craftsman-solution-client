@@ -19,6 +19,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddItem from './Pages/Dashboard/AddItem';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import NotFound from './Pages/Shared/NotFound';
+import Payment from './Pages/Dashboard/Payment';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='addItem' element={<AddItem></AddItem>}></Route>
           <Route path='manageOrder' element={<ManageOrders></ManageOrders>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>

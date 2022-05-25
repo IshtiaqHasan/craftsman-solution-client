@@ -10,15 +10,22 @@ const Purchase = ({ items, setItems }) => {
 
     const handleBuy = event => {
         event.preventDefault();
+        let orderQTY = event.target.order.value;
+        let totalCost = price * orderQTY;
+        event.target.cost.value = totalCost;
         const order = {
             itemId: _id,
             ItemName: name,
             OrderQuantity: event.target.order.value,
+            price,
             BuyerName: user.displayName,
             BuyerEmail: user.email,
             Contact: event.target.phone.value,
-            Address: event.target.address.value
+            Address: event.target.address.value,
+            totalCost
         }
+
+
 
         fetch('http://localhost:5000/order', {
             method: 'POST',
@@ -44,13 +51,17 @@ const Purchase = ({ items, setItems }) => {
                     <p >Quantity Available: {AvailableQuantity}pcs</p>
                     <p >Minimum Order: {MinOrderQuantity}pcs</p>
                     <h3 className="font-bold text-lg text-accent">Price: ${price}</h3>
+
                     <form onSubmit={handleBuy} className='grid grid-cols-1 gap-2'>
                         <input type="text" name='name' disabled value={user?.displayName} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='email' disabled value={user?.email} className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='address' placeholder="Your Address" className="input input-bordered w-full max-w-xs" />
-                        <input type="text" name='order' placeholder="Order QTY" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='order' id="quantity" placeholder="Order QTY" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='cost' id="total" value="" placeholder="Total cost" className="input input-bordered w-full max-w-xs" />
                         <input type="submit" value="BUY" placeholder="Type here" className="btn btn-accent w-full max-w-xs" />
+
+
                     </form>
                 </div>
             </div>
