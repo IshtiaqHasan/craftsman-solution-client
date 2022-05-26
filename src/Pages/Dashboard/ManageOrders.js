@@ -7,7 +7,7 @@ const ManageOrders = () => {
     const handleDelete = itemId => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/order/${itemId}`
+            const url = `https://polar-lowlands-96437.herokuapp.com/order/${itemId}`
             fetch(url, {
                 method: 'DELETE'
             })

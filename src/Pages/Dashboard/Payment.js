@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L3L33B4fS6b0mznQhYgZXefiZLX4k0We29Xy
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://polar-lowlands-96437.herokuapp.com/order/${id}`;
     const { data, isLoading } = useQuery(['order', id], () => fetch(url, {
 
         method: 'GET',

@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?BuyerEmail=${user.email}`, {
+            fetch(`https://polar-lowlands-96437.herokuapp.com/order?BuyerEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

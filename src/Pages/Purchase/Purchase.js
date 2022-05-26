@@ -34,7 +34,7 @@ const Purchase = ({ items, setItems }) => {
         }
 
         else {
-            fetch('http://localhost:5000/order', {
+            fetch('https://polar-lowlands-96437.herokuapp.com/order', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
