@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div class="hero  bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="hero-content min-h-screen flex-col lg:flex-row-reverse">
                 <img src="https://i.ibb.co/hgCb89x/banner2.jpg" class="max-w-sm rounded-lg shadow-2xl" />
                 <div>
                     <h1 class="text-3xl font-bold">ABOUT US</h1>
