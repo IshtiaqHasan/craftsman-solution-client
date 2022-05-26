@@ -20,6 +20,7 @@ import AddItem from './Pages/Dashboard/AddItem';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import NotFound from './Pages/Shared/NotFound';
 import Payment from './Pages/Dashboard/Payment';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 function App() {
@@ -39,16 +40,18 @@ function App() {
             <Dashboard />
           </RequireAuth>
         } >
-          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+
+          <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='addItem' element={<AddItem></AddItem>}></Route>
           <Route path='manageOrder' element={<ManageOrders></ManageOrders>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
-          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path="purchase" element={<Purchase />} />
         <Route path="login" element={<Login />} />
+        <Route path="blogs" element={<Blogs />} />
         <Route path="signup" element={<SignUp />} />
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

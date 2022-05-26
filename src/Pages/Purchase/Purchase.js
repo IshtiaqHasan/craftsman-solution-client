@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { toast } from 'react-toastify';
+import { toast, useToast } from 'react-toastify';
 
 
 const Purchase = ({ items, setItems }) => {
@@ -24,7 +24,11 @@ const Purchase = ({ items, setItems }) => {
             Address: event.target.address.value,
             totalCost
         }
+        const inputOrderQty = event.target.order.value;
 
+        if (inputOrderQty > AvailableQuantity || inputOrderQty < MinOrderQuantity) {
+            toast.error('Please Order Leass than Available Qty & Higher Than Minimun Order Quantity')
+        }
 
 
         fetch('http://localhost:5000/order', {
@@ -39,6 +43,7 @@ const Purchase = ({ items, setItems }) => {
                 console.log(data)
                 toast(`Hello ${user.displayName} We Have Received Your Order`)
             })
+        setItems('');
     }
     return (
         <div>
@@ -59,7 +64,8 @@ const Purchase = ({ items, setItems }) => {
                         <input type="text" name='address' placeholder="Your Address" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='order' id="quantity" placeholder="Order QTY" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='cost' id="total" value="" placeholder="Total cost" className="input input-bordered w-full max-w-xs" />
-                        <input type="submit" value="BUY" placeholder="Type here" className="btn btn-accent w-full max-w-xs" />
+
+                        <input type="submit" id='submitButton' value="BUY" placeholder="Type here" className="btn btn-accent w-full max-w-xs" />
 
 
                     </form>
