@@ -21,6 +21,7 @@ import ManageOrders from './Pages/Dashboard/ManageOrders';
 import NotFound from './Pages/Shared/NotFound';
 import Payment from './Pages/Dashboard/Payment';
 import Blogs from './Pages/Blogs/Blogs';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 
 function App() {
@@ -52,7 +53,8 @@ function App() {
         <Route path="purchase" element={<Purchase />} />
         <Route path="login" element={<Login />} />
         <Route path="blogs" element={<Blogs />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="blogs" element={<Blogs />} />
+        <Route path="myPortfolio" element={<MyPortfolio />} />
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />

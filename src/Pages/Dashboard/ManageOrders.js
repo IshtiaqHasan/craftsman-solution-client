@@ -3,6 +3,7 @@ import useOrders from '../../hooks/useOrders';
 
 const ManageOrders = () => {
     const [orders, setOrders] = useOrders();
+
     const handleDelete = itemId => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
@@ -25,10 +26,11 @@ const ManageOrders = () => {
                 orders.map(order => <div
                     key={order._id}
                 >
+
                     <div className='flex h-20'>
                         <h4 className='m-2'>Orders Name: {order.ItemName}</h4>
                         <p className='m-2'>Buyer: {order.BuyerEmail}</p>
-                        <p className='m-2'>Order Qty:{order.Order_Quantity}</p>
+                        <p className='m-2'>Order Qty: {order.OrderQuantity} pcs</p>
                         <button onClick={() => handleDelete(order._id)} className='btn btn-xs m-2'>X</button>
                     </div>
 

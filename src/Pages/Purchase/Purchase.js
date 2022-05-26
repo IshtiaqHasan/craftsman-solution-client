@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast, useToast } from 'react-toastify';
+import Loading from '../Shared/Loading';
 
 
 const Purchase = ({ items, setItems }) => {
@@ -24,26 +25,30 @@ const Purchase = ({ items, setItems }) => {
             Address: event.target.address.value,
             totalCost
         }
-        const inputOrderQty = event.target.order.value;
+        if (loading) {
+            <Loading></Loading>
+        }
 
-        if (inputOrderQty > AvailableQuantity || inputOrderQty < MinOrderQuantity) {
+        if (orderQTY > AvailableQuantity || orderQTY < MinOrderQuantity) {
             toast.error('Please Order Leass than Available Qty & Higher Than Minimun Order Quantity')
         }
 
-
-        fetch('http://localhost:5000/order', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(order)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                toast(`Hello ${user.displayName} We Have Received Your Order`)
+        else {
+            fetch('http://localhost:5000/order', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(order)
             })
-        setItems('');
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    toast(`Hello ${user.displayName} We Have Received Your Order`)
+                })
+        }
+
+
     }
     return (
         <div>
@@ -65,7 +70,7 @@ const Purchase = ({ items, setItems }) => {
                         <input type="text" name='order' id="quantity" placeholder="Order QTY" className="input input-bordered w-full max-w-xs" />
                         <input type="text" name='cost' id="total" value="" placeholder="Total cost" className="input input-bordered w-full max-w-xs" />
 
-                        <input type="submit" id='submitButton' value="BUY" placeholder="Type here" className="btn btn-accent w-full max-w-xs" />
+                        <input type="submit" name='submit' id='submitButton' value="BUY" placeholder="Type here" className="btn btn-accent w-full max-w-xs" />
 
 
                     </form>

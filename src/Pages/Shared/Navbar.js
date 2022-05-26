@@ -20,6 +20,7 @@ const Navbar = () => {
         }
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/about">About</Link></li>
+        <li><Link to="/myPortfolio">My Portfolio</Link></li>
         <li>{user ? <button className="btn btn-ghost" onClick={logout}>Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
 
